@@ -239,7 +239,7 @@ public class HTTPServerConfig {
   HTTPServerConfig(String[] args) {
     if (System.getenv("LT_CONFIG_PUBLIC_ACCESS") != null) {
       publicAccess = Boolean.parseBoolean(System.getenv("LT_CONFIG_PUBLIC_ACCESS"));
-      System.out.println("INFO: set 'public_access' is " + Boolean.parseBoolean(System.getenv("LT_CONFIG_PUBLIC_ACCESS")) + " -> from environment variable LT_CONFIG_PUBLIC_ACCESS");
+      logger.info("Set 'public_access' to {} from environment variable LT_CONFIG_PUBLIC_ACCESS", publicAccess);
     }
     String portEnv = System.getenv("LT_CONFIG_PORT");
     if (portEnv != null) {
